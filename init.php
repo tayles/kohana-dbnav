@@ -1,6 +1,6 @@
 <?php
 
-require_once(MODPATH.'dbnav\text.php');
+require_once(MODPATH.'dbnav\classes\text.php');
 require_once(MODPATH.'dbnav\classes\dbnav\table\admin.php');
 require_once(MODPATH.'dbnav\classes\dbnav\table\editable.php');
 require_once(MODPATH.'dbnav\classes\dbnav\table\decorated.php');
