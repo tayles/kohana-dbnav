@@ -21,12 +21,12 @@ class DBNav_Editable_Table extends Table {
 				//$val_mod = Num::format($val, 0);
 			}
 			else if( in_array($column_name, array('data_size', 'index_size', 'total_size') ) ) {
-				$val_mod = Text::bytes($val, NULL, '%01.0f <em>%s</em>');
+				$val_mod = DBNav_Text::bytes($val, NULL, '%01.0f <em>%s</em>');
 			}
 			else if( $column_name == 'comment' ) {
 				$val_mod = '<em>' . $val . '</em>';
 			}
-			else if( Text::contains($column_name, 'date') ) {
+			else if( DBNav_Text::contains($column_name, 'date') ) {
 				$val_mod = '<span class="date time">' . date( Kohana::config('dbnav.format.date') . ' ' . Kohana::config('dbnav.format.time'), $val) . '</span>';
 			}
 			

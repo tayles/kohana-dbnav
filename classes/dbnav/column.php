@@ -44,7 +44,7 @@ class DBNav_Column extends Model {
 		
 		$this->nullable = ( $this->nullable == '1' );
 		
-		$this->auto_incr = Text::contains($this->extra, 'auto_increment');
+		$this->auto_incr = DBNav_Text::contains($this->extra, 'auto_increment');
 	}
 	
 	/**

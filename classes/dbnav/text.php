@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Text extends Kohana_Text {
+class DBNav_Text extends Kohana_Text {
 
 	/**
 	 * Searches a string for a word or words (using word boundaries)

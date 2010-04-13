@@ -93,7 +93,7 @@ class DBNav_Form extends Model {
 				break;
 		}
 		
-		if( Text::contains($column->name, array('lat', 'latitude')) ) {
+		if( DBNav_Text::contains($column->name, array('lat', 'latitude')) ) {
 			$html = Html::anchor('#', 'map');
 		}
 		
