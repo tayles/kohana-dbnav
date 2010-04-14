@@ -70,7 +70,7 @@ class Controller_DBNav extends Controller_Template {
 	
 	public function action_search() {
 	
-		$columns = $this->dbnav->columns('geo', 'capital_cities');
+		$columns = $this->dbnav->columns($this->schema->name, $this->table->name);
 	
 		$query = $_GET['q'];
 		
@@ -213,7 +213,7 @@ class Controller_DBNav extends Controller_Template {
 		if( count($where) > 0 ) {
 			// construct sql query
 			$query = DB::select('*')
-						->from('geo.capital_cities')
+						->from($this->schema->name . '.' . $this->table->name)
 						->limit(10);
 						
 			foreach( $where as $clause ) {

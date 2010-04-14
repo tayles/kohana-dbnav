@@ -104,7 +104,7 @@ class DBNav_Decorated_Table extends DBNav_Admin_Table {
 				$val_mod = '<em>NULL</em>';
 			}
 			else if( strlen($val_trimmed) < strlen($val) && !isset($val_mod) ) {
-				$val_mod = $val_trimmed . ' ' . Html::anchor(array('dbnav',$row), '<small>more</small>');
+				$val_mod = $val_trimmed . ' ' . Html::anchor(array('dbnav',$row), '<small>&raquo;</small>');
 			}
 			
 			return '<td>' . (isset($val_mod) ? $val_mod : $val) . '</td>';
